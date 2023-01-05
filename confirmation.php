@@ -15,12 +15,12 @@
 
   <!-- My Own CSS-->
   <link rel="stylesheet" href="css/style.css" />
-  <script src="js/my-confirmation.js"></script><title>Heidis Language About</title>
+  <title>Heidis Language About</title>
 </head><body>
    <!--Navigation Bar with Logo and Titel-->
    <nav class="navbar navbar-dark navbar-expand-lg bg-success">
     <div class="container-fluid">
-      <a id="title" class="navbar-brand align-text-top m-auto text-lg-start text-wrap" href="confirmation.html">
+      <a id="title" class="navbar-brand align-text-top m-auto text-lg-start text-wrap" href="confirmation.php">
         <img class="d-inline-block" src="image/logo.jpeg" alt="logo" width="100" height="100">
         Heidi`s Language School</a>
       <!--Navbar button to open menu-->
@@ -33,16 +33,16 @@
       <div class="collapse navbar-collapse me-5 pt-5" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active pt-5 me-5">
-            <a class="nav-link" href="Index.html">Home</a>
+            <a class="nav-link" href="Index.php">Home</a>
           </li>
           <li class="nav-item active pt-5 me-5">
-            <a class="nav-link" href="Register.html">Register</a>
+            <a class="nav-link" href="Register.php">Register</a>
           </li>
           <li class="nav-item active pt-5 me-5">
-            <a class="nav-link" href="cerificat.html">Certificat</a>
+            <a class="nav-link" href="Certificate.php">Certificat</a>
           </li>
           <li class="nav-item active pt-5 me-5">
-            <a class="nav-link" href="About.html">About</a>
+            <a class="nav-link" href="About.php">About</a>
           </li>
         </ul>
       </div>
