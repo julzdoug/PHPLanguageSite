@@ -9,3 +9,4 @@ PHP Server: Reload Server
 4.Starting with radio buttons and answer: worked otu (I had to change the form action and method to php and post.)
 5.I also had to change the button form input to submit and take the btn out
 6.thank you tobi and chris for implementing with me together the while loop that i need to understand....
+7. next checkboxes
