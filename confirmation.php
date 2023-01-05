@@ -48,14 +48,50 @@
       </div>
     </div>
   </nav>
+  
   <!--pagecontext body with image-->
   <div class="bg-image mh-auto" style="
     background-image: url('image/1260521.jpg');">
-  <div class="w-50 p-3 m-auto col-md-4 mh-auto formul">
+  <div class="w-50 p-3 m-auto col-md-4 mh-auto">
       <h1 class="centered">Besten dank - du hast folgende Angaben eingetragen:</h1><div id="confirmation-message" class="centered"></div>
-      <script>
-          writeConfirmation();
-      </script>
+      <br>
+      <p class="centered">Hi..<br><?php echo $_POST["inlineRadioOptions"] ?></p>
+      <br>
+      <p class="centered">Welcome <br><?php echo $_POST["fname"] ?></p>
+      <br>
+      <p class="centered">Last Name: <br><?php echo $_POST["lname"] ?></p>
+      <br>
+      <p class="centered">Street Name:<br><?php echo $_POST["streetName"] ?></p>
+      <br>
+      <p class="centered">Post Code:<br><?php echo $_POST["postCode"] ?></p>
+      <br>
+      <p class="centered">City:<br><?php echo $_POST["city"] ?></p>
+      <br>
+      <p class="centered">Country:<br><?php echo $_POST["country"] ?></p>
+      <br>
+      <p class="centered">Age:<br><?php echo $_POST["DateOfBirth"] ?></p>
+      <br>
+      <p class="centered">Phone Number:<br><?php echo $_POST["phoneNr"] ?></p>
+      <br>
+      <p class="centered">E-Mail:<br><?php echo $_POST["email"] ?></p>
+      <br>
+      
+     
+      <?php
+      print_r($_POST);
+
+        $i=1;
+        while($i <= 8){
+          $a = "language" . $i;
+
+          if (isset($_POST[$a])) {
+            echo "<p class='centered'>You choose:<br> $_POST[$a] </p>";
+          }
+          
+          $i++;
+        }
+        ?>
+
   </div>
 </div>
 </body>
