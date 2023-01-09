@@ -10,4 +10,5 @@ PHP Server: Reload Server
 5.I also had to change the button form input to submit and take the btn out
 6.thank you tobi and chris for implementing with me together the while loop that i need to understand....
 7. next checkboxes and terms and condition
-8. Starting form controlle 
+8. Starting form controlle link:https://www.w3schools.com/php/php_form_required.asp
+(accodring to anita it is good to require js for validation)
