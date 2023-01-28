@@ -13,3 +13,5 @@ PHP Server: Reload Server
 8. Starting form controlle link:https://www.w3schools.com/php/php_form_required.asp
 (accodring to anita it is good to require js for validation)
 9. ran into some problem (The page that you're looking for used information that you entered. Returning to that page might cause any action you took to be repeated. Do you want to continue?)
+10. made the page responsible im sure there must be another way of validation in php 
+problem it only show 1 language.....

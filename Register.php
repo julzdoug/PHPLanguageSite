@@ -50,8 +50,9 @@
   <!--pagecontext body with image-->
   <div class="bg-image mh-auto" style="background-image: url('image/1260521.jpg');">
     <!-- form start-->
-    <form action="confirmation.php" class="w-50 p-3 m-auto col-md-4 mh-auto formul" id="contactForm" onsubmit="return validateForm() && validateCheckboxes();">
-   <!--gender-->
+    <form action="confirmation.php"  method="post" class="w-60 p-3 m-auto col formul" id="contactForm" onsubmit="return validateForm() && validateCheckboxes();">
+    <label><span class="display">Gender please select at least one</span></label>
+    <!--gender-->
       <div class="form-check-inline">
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Male">
         <label class="form-check-label" for="inlineRadio1">Male</label>
@@ -65,21 +66,25 @@
         <label class="form-check-label" for="inlineRadio3">Other</label>
       </div>
       <!-- Name input -->
+      
       <div class="row justify-content-sm-start g-3">
         <label class="form-label py-2" for="fname"></label>
-        <input class="form-control py-1" id="fname" type="text" placeholder="First Name"
+        <p class="mb-0">First Name</p>
+        <input class="form-control py-1" id="fname" name="fname" type="text" placeholder="First Name"
           data-sb-validations="required" />
         <div class="invalid-feedback" data-sb-feedback="name:required"> First Name is required.</div>
       </div>
       <div class="row justify-content-sm-start g-3">
         <label class="form-label py-2" for="lname"></label>
-        <input class="form-control py-1" id="lname" type="text" placeholder="Last Name" data-sb-validations="required">
+        <p class="mb-0">Last Name</p>
+        <input class="form-control py-1" id="lname" type="text" name="lname" placeholder="Last Name" data-sb-validations="required">
         <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
       </div>
       <!--StreetName-->
       <div class="row justify-content-sm-start g-3">
         <label class="form-label py-2" for="streetName"></label>
-        <input class="form-control py-1" id="streetName" type="text" placeholder="Street Name"
+        <p class="mb-0">StreetName</p>
+        <input class="form-control py-1" id="streetName" name="streetName" type="text" placeholder="Street Name examplestreet.2"
           data-sb-validations="required">
         <div class="invalid-feedback" data-sb-feedback="street:required">Street is required.
         </div>
@@ -87,81 +92,88 @@
       <!--Postcode-->
       <div class="row justify-content-sm-start g-3">
         <label class="form-label py-2" for="postCode"></label>
-        <input class="form-control py-1" id="postCode" type="number" placeholder="Post Code"
+        <p class="mb-0">Post Code</p>
+        <input class="form-control py-1" id="postCode" type="number" name="postCode" placeholder="Post Code 8000"
           data-sb-validations="required" value="PostCode" />
         <div class="invalid-feedback" data-sb-feedback="postCode:required">Post Code is required.</div>
       </div>
       <!--CityName-->
       <div class="row justify-content-sm-start g-3">
         <label class="form-label py-2" for="city"></label>
-        <input class="form-control py-1" id="city" type="text" placeholder="City" data-sb-validations="required" />
+        <p class="mb-0">City</p>
+        <input class="form-control py-1" id="city" type="text" name="city" placeholder="City" data-sb-validations="required" />
         <div class="invalid-feedback" data-sb-feedback="city:required">City is required.</div>
       </div>
       <!--Country Name-->
       <div class="row justify-content-sm-start g-3">
         <label class="form-label py-2" for="country"></label>
-        <input class="form-control py-1" id="country" type="text" placeholder="Country"
+        <p class="mb-0">Country</p>
+        <input class="form-control py-1" id="country" name="country" type="text" placeholder="Country"
           data-sb-validations="required" />
         <div class="invalid-feedback" data-sb-feedback="country:required">Country is required.</div>
       </div>
       <!--Age-->
       <div class="row justify-content-sm-start g-3">
         <label class="form-label py-2" for="DateOfBirth"></label>
-        <input class="form-control py-1" id="DateOfBirth" type="number" placeholder="Age"
+        <p class="mb-0">Age</p>
+        <input class="form-control py-1" id="DateOfBirth" name="DateOfBirth" type="number" placeholder="Age"
           data-sb-validations="required" value="BirthDate" />
         <div class="invalid-feedback" data-sb-feedback="dateOfBirth:required">Age</div>
       </div>
       <!--Phone Number-->
       <div class="row justify-content-sm-start g-3">
         <label class="form-label py-2" for="phoneNr"></label>
-        <input class="form-control py-1" id="phoneNr" type="number" placeholder="Phone Number"
+        <p class="mb-0">Phone Number</p>
+        <input class="form-control py-1" id="phoneNr" name="phoneNr" type="number" placeholder="Phone Number 044 xxx xx xx"
           data-sb-validations="required" />
         <div class="invalid-feedback" data-sb-feedback="phoneNr:required">Phone Nr is required.</div>
       </div>
       <!--Email-->
       <div class="row justify-content-sm-start g-3">
         <label class="form-label py-2" for="email"></label>
-        <input class="form-control py-1" id="email" type="email" placeholder="Email" data-sb-validations="required" />
+        <p class="mb-0">Email</p>
+        <input class="form-control py-1" id="email" type="email" name="email" placeholder="Email" data-sb-validations="required" />
         <div class="invalid-feedback" data-sb-feedback="email:required">Email is required.</div>
       </div>
       <!--Language Selection-->
       <div class="py-2 justify-content-sm-start g-3 mt-5">
-        <label><span class="display">Language</span></label>
+        <label><span class="display">Language please select at least one</span></label>
       </div>
-      <div class="form-check form-check-inline justify-content-sm-start g-3">
-        <input class="form-check-input" id="english" type="checkbox" name="language" value="english" />
+      <div class="row justify-content-center">
+      <div>
+        <input class="form-check-input" id="english" type="checkbox" name="language" value="English" />
         <label class="form-check-label" for="english">English</label>
       </div>
-      <div class="form-check form-check-inline justify-content-sm-start g-3">
-        <input class="form-check-input" id="russian" type="checkbox" name="language" value="russian" />
+      <div>
+        <input class="form-check-input" id="russian" type="checkbox" name="language" value="Russian" />
         <label class="form-check-label" for="russian">Russian</label>
       </div>
-      <div class="form-check form-check-inline justify-content-sm-start g-3">
-        <input class="form-check-input" id="german" type="checkbox" name="language" value="german" />
+      <div>
+        <input class="form-check-input" id="german" type="checkbox" name="language" value="German" />
         <label class="form-check-label" for="german">German</label>
       </div>
-      <div class="form-check form-check-inline justify-content-sm-start g-3">
-        <input class="form-check-input" id="greek" type="checkbox" name="language" value="greek" />
+      <div>
+        <input class="form-check-input" id="greek" type="checkbox" name="language" value="Greek" />
         <label class="form-check-label" for="greek">Greek</label>
       </div>
-      <div class="form-check form-check-inline justify-content-sm-start g-3">
-        <input class="form-check-input" id="french" type="checkbox" name="language" value="french" />
+      <div>
+        <input class="form-check-input" id="french" type="checkbox" name="language" value="French" />
         <label class="form-check-label" for="french">French</label>
       </div>
-      <div class="form-check form-check-inline justify-content-sm-start g-3">
-        <input class="form-check-input" id="dutch" type="checkbox" name="language" value="dutch" />
+      <div>
+        <input class="form-check-input" id="dutch" type="checkbox" name="language" value="Dutch" />
         <label class="form-check-label" for="dutch">Dutch</label>
       </div>
-      <div class="form-check form-check-inline justify-content-sm-start g-3">
-        <input class="form-check-input" id="spanish" type="checkbox" name="language" value="spanish" />
+      <div>
+        <input class="form-check-input" id="spanish" type="checkbox" name="language" value="Spanish" />
         <label class="form-check-label" for="spanish">Spanish</label>
       </div>
-      <div class="form-check form-check-inline justify-content-sm-start g-3">
-        <input class="form-check-input" id="hungarian" type="checkbox" name="language" value="hungarian" />
+      <div>
+        <input class="form-check-input" id="hungarian" type="checkbox" name="language" value="Hungarian" />
         <label class="form-check-label" for="hungarian">Hungarian</label>
       </div>
       <!--Payment-->
-      <div class="row mb-3 py-2">
+      <div class="row py-2 g-3">
         <label>Payment</label>
         <div class="form-check-inline">
           <input class="form-check-input" id="bills" type="checkbox" name="payment" value="bill" />
@@ -173,7 +185,7 @@
         </div>
       </div>
       <!--Terms and Conditon-->
-      <div class="mb-3">
+      <div class="row py-2 g-3">
         <label class="form-label form-check-inline">Terms and Conditions</label>
         <div>
           <input class="form-check-input" id="termsAndConditions" type="radio" name="termsAndConditions"
@@ -182,7 +194,7 @@
         </div>
         <div class="mt-5 mb-3 form-check">
           <button class="form-check btn btn-primary btn-lg" id="submitButton" type="submit"
-            onclick="validateForm(),validateCheckboxes();">Submit</button>
+            >Submit</button>
         </div>
       </div>
     </form>

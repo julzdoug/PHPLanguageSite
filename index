@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  <title>Example</title>
+</head>
+
+
+<body class="d-flex flex-column min-vh-100">
+  <!--Header-->
+  <?php
+  include "include/header.php";
+  ?>
+  <!--End Header-->
+  <!-- Start your project here-->
+  <div class="container my-4 text-center">
+
+    <p class="text-center mt-5"><?php
+                                $title = "Beispiel 1- Name im Header";
+                                echo "<strong>" . $title . "</strong>";
+                                ?></p>
+    <?php
+    /* echo mit "" verwenden damit Variavblename erstzt werden.
+    $title existiert bereit. SIe wird im voranghehenden php-Tag deklariert und gesetzt.
+    */
+    echo "<p class='text-center mt-5'>
+    <strong>$title</strong>
+    </p>";
+    ?>
+    <!-- FORMULAR -->
+    <div class="form-check">
+      <form action="result.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br>
+    </div>
+    <div class="form-check">
+      <p>Geht es dir heute gut?</p>
+      <input type="radio" id="ja" name="radio-mood" value="ja">
+      <label for="ja">Yes</label><br>
+      <input type="radio" id="nein" name="radio-mood" value="nein">
+      <label for="nein">No</label><br><br>
+    </div>
+    <div class="form-check">
+      <p>Welche Farben hat die Schweizer Fahne?</p>
+      <input type="checkbox" id="color1" name="color-red" value="rot">
+      <label for="color1">Red</label><br>
+      <input type="checkbox" id="color2" name="color-yellow" value="gelb">
+      <label for="color2">Yellow</label><br>
+      <input type="checkbox" id="color3" name="color-blue" value="blau">
+      <label for="color3">Blue</label><br>
+      <input type="checkbox" id="color4" name="color-white" value="weiss">
+      <label for="color4">White</label><br><br>
+      </div>
+      <div class="form-check">
+      <p>WHat is your favorite Animals?</p>
+      <select class = "form-select" id="inputGroupSelect01" name="inputGroupSelect01">
+        <option selected>Choose...</option>
+        <?php
+        // Generiere die Tiernamen mit Hilfe eines While-schleife.
+        $mammals = array("Rind", "Pferd", "Ziege","Mensch");
+        $i = 0;
+        $length = count($mammals);//sizeof is ein alias für Count
+        while ($i < $length) {
+          $m = $mammals[$i];
+          //Ich könnte folgendes verwenden
+          //echo '<option value="'.$m.'">'.$m.'</option>';
+          //Es ist aber kürzer und einfacher im String Template Format
+          //mit Double-Quotes. Preis: Ich muss innerhalb der "" mit Single Quotes arbeiten.
+          echo "<option value='$m'>$m</option>";
+          $i = $i + 1; // Kurzform $i++
+        }
+        ?>
+        </div>
+</select>
+</div>
+<br>
+<label for="name">Comment (please dont use no 'fuck' even if given),and only 20 letters:<label>
+  <input type="text" id="comment" name="comment"><br>
+  <br>
+  <br>
+  
+
+
+
+    <input type="submit" value="Abschicken">
+    </form>
+    <!-- END:FORMULAR -->
+  </div>
+
+
+
+  </div>
+  <!-- End your project here-->
+  <!--Footer-->
+  <?php
+  include 'include/footer.php';
+  ?>
+  <!--End Footer-->
+</body>

@@ -52,33 +52,39 @@
   <!--pagecontext body with image-->
   <div class="bg-image mh-auto" style="
     background-image: url('image/1260521.jpg');">
-  <div class="w-50 p-3 m-auto col-md-4 mh-auto">
+  <div class="w-60 p-3 m-auto col formul">
       <h1 class="centered">Besten dank - du hast folgende Angaben eingetragen:</h1><div id="confirmation-message" class="centered"></div>
       <br>
-      <p class="centered">Hi..<br><?php echo $_POST["inlineRadioOptions"] ?></p>
+      <p class="centered">Hi..<br><?php echo $_POST['inlineRadioOptions'] ?></p>
       <br>
-      <p class="centered">Welcome <br><?php echo $_POST["fname"] ?></p>
+      <p class="centered">Welcome <br><?php echo $_POST['fname'] ?></p>
       <br>
-      <p class="centered">Last Name: <br><?php echo $_POST["lname"] ?></p>
+      <p class="centered">Last Name: <br><?php echo $_POST['lname'] ?></p>
       <br>
-      <p class="centered">Street Name:<br><?php echo $_POST["streetName"] ?></p>
+      <p class="centered">Street Name:<br><?php echo $_POST['streetName'] ?></p>
       <br>
-      <p class="centered">Post Code:<br><?php echo $_POST["postCode"] ?></p>
+      <p class="centered">Post Code:<br><?php echo $_POST['postCode'] ?></p>
       <br>
-      <p class="centered">City:<br><?php echo $_POST["city"] ?></p>
+      <p class="centered">City:<br><?php echo $_POST['city'] ?></p>
       <br>
-      <p class="centered">Country:<br><?php echo $_POST["country"] ?></p>
+      <p class="centered">Country:<br><?php echo $_POST['country'] ?></p>
       <br>
-      <p class="centered">Age:<br><?php echo $_POST["DateOfBirth"] ?></p>
+      <p class="centered">Age:<br><?php echo $_POST['DateOfBirth'] ?></p>
       <br>
-      <p class="centered">Phone Number:<br><?php echo $_POST["phoneNr"] ?></p>
+      <p class="centered">Phone Number:<br><?php echo $_POST['phoneNr'] ?></p>
       <br>
-      <p class="centered">E-Mail:<br><?php echo $_POST["email"] ?></p>
+      <p class="centered">E-Mail:<br><?php echo $_POST['email'] ?></p>
       <br>
-      
+      <br>
+      <p class="centered">Language:<br><?php echo $_POST['language'] ?></p>
+      <br>
+      <p class="centered">Payment Method:<br><?php echo $_POST['payment'] ?></p>
+      <br>
+      <p class="centered">You agreed to:<br><?php echo $_POST['termsAndConditions'] ?></p>
+      <br>
      
       <?php
-      print_r($_POST);
+      
 
         $i=1;
         while($i <= 8){

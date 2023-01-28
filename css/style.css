@@ -11,6 +11,10 @@
   }
 }
 
+p {
+  font-size: small;
+}
+
 #title,.navbar-nav,#navbarNav {
       font-size: xx-large;
       font-family: cursive;  
