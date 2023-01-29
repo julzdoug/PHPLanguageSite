@@ -13,6 +13,8 @@
     crossorigin="anonymous"></script>
   <!-- My Own CSS-->
   <link rel="stylesheet" href="css/style.css" />
+  <!--my javascript -->
+  <script src="js/register.js"></script>
   <title>Heidis Language About</title>
 </head>
 <body>
