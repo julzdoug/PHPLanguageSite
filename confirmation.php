@@ -87,7 +87,7 @@
       
 
         $i=1;
-        while($i <= 8){
+        while ($i <= 8) {
           $a = "language" . $i;
 
           if (isset($_POST[$a])) {
